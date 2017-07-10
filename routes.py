@@ -13,7 +13,7 @@ APPNAME='cefitbot'
 @route('/setWebhook')
 def setWebhook():
     bot = telegram.Bot(TOKEN)
-    botWebhookResult = bot.setWebhook(webhook_url='https://{}.azurewebsites.net/bothook'.format(APPNAME))
+    botWebhookResult = bot.setWebhook(webhook_url='https://{}.azurewebsites.net/botHook'.format(APPNAME))
     return str(botWebhookResult)
 
 
