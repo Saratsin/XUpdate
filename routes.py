@@ -7,7 +7,7 @@ from datetime import datetime
 import telegram
 import json
 import ssl
-import urllib
+import urllib.request
 
 app_id= 77
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
