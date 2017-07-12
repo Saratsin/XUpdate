@@ -2,8 +2,9 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view, redirect, request
+from bottle import route, view, redirect
 from datetime import datetime
+from urllib import request
 import  json, ssl
 
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
