@@ -57,14 +57,6 @@ def setWebhook():
     return str(botWebhookResult)
 
 
-@route('/bothook', method='POST')
-def botHook():
-    bot = telegram.Bot(TOKEN)
-    update = telegram.update.Update.de_json(request.json, bot)
-    bot.sendMessage(chat_id=update.message.chat_it, text=getSum(update.message.text, update.message.from_user.username))
-    return 'OK'
-
-
 def getSum(query, userName):
     try:
         splittedBySum = query.split('+')
@@ -73,6 +65,14 @@ def getSum(query, userName):
         return str(int(splittedBySum[0]) + int(splittedBySum[1]))
     except:
         return 'I\'m sorry, {}. I\'m afraid I can\'t do that'.format(userName)
+
+
+@route('/bothook', method='POST')
+def botHook():
+    bot = telegram.Bot(TOKEN)
+    update = telegram.update.Update.de_json(request.json, bot)
+    bot.sendMessage(chat_id=update.message.chat_it, text=getSum(update.message.text, update.message.from_user.username))
+    return 'OK'
 
 
 @route('/')
