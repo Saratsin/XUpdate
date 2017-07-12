@@ -8,7 +8,6 @@ import telegram
 import json
 import urllib
 import ssl
-import time
 
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
 APPNAME='cefitbot'
@@ -99,7 +98,3 @@ def about():
         message='Your application description page.',
         year=datetime.now().year
     )
-
-while True:
-    app_info = checkForUpdateLocal()
-    time.sleep(10)
