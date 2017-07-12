@@ -4,7 +4,7 @@ Routes and views for the bottle application.
 
 from bottle import route, view, redirect
 from datetime import datetime
-from urllib import request
+import urllib.request
 import  json, ssl
 
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
@@ -17,9 +17,9 @@ def getApp():
 
 
 def getAppInfoJson():
-    newRequest = request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
+    newRequest = urllib.request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
     gcontext = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
-    return json.loads(request.urlopen(newRequest, context=gcontext).read())
+    return json.loads(urllib.request.urlopen(newRequest, context=gcontext).read())
 
 
 def checkForUpdateLocal():
