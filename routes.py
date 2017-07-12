@@ -24,6 +24,11 @@ def getApp():
 def checkForUpdate():
     return app_info
 
+def getAppInfoJson():
+    request = urllib.request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
+    gcontext = ssl._create_unverified_context()
+    return json.loads(urllib.request.urlopen(request, context=gcontext).read())
+
 def checkForUpdateLocal():
     try:
         appResultJson = getAppInfoJson()
@@ -41,15 +46,6 @@ def checkForUpdateLocal():
         return str(resultJson)
     except:
         return None
-
-while True:
-    app_info = checkForUpdateLocal()
-    time.sleep(10)
-
-def getAppInfoJson():
-    request = urllib.request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
-    gcontext = ssl._create_unverified_context()
-    return json.loads(urllib.request.urlopen(request, context=gcontext).read())
 
 @route('/setWebhook')
 def setWebhook():
@@ -103,3 +99,7 @@ def about():
         message='Your application description page.',
         year=datetime.now().year
     )
+
+while True:
+    app_info = checkForUpdateLocal()
+    time.sleep(10)
