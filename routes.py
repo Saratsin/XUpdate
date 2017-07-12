@@ -2,12 +2,11 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view, redirect, request
+from bottle import route, view, redirect
 from datetime import datetime
-import telegram
 import json
 import ssl
-import urllib.request
+from urllib import request
 
 app_id= 77
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
@@ -51,9 +50,9 @@ def getApp():
 
 
 def getAppInfoJson():
-    request = urllib.request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
+    newRequest = request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
     gcontext = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
-    return json.loads(urllib.request.urlopen(request, context=gcontext).read())
+    return json.loads(request.urlopen(newRequest, context=gcontext).read())
 
 
 def checkForUpdateLocal():
@@ -78,31 +77,5 @@ def checkForUpdateLocal():
 @route('/checkForUpdate')
 def checkForUpdate():
     return checkForUpdateLocal()
-
-
-@route('/setWebhook')
-def setWebhook():
-    bot = telegram.Bot(TOKEN)
-    botWebhookResult = bot.setWebhook(webhook_url='https://{}.azurewebsites.net/bothook'.format(APPNAME))
-    return str(botWebhookResult)
-
-
-def getSum(query, userName):
-    try:
-        splittedBySum = query.split('+')
-        if len(splittedBySum) != 2:
-            raise ValueError('Too complicated stuff')
-        return str(int(splittedBySum[0]) + int(splittedBySum[1]))
-    except:
-        return 'I\'m sorry, {}. I\'m afraid I can\'t do that'.format(userName)
-
-
-@route('/bothook', method='POST')
-def botHook():
-    bot = telegram.Bot(TOKEN)
-    update = telegram.update.Update.de_json(request.json, bot)
-    bot.sendMessage(chat_id=update.message.chat_it, text=getSum(update.message.text, update.message.from_user.username))
-    return 'OK'
-
 
 

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f855a743-e1c0-4d7e-a964-950346aa255a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.py" afterPath="$PROJECT_DIR$/routes.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,14 +17,44 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+            <state relative-caret-position="343">
+              <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
               <folding>
-                <element signature="e#54#103#0" expanded="true" />
+                <element signature="e#54#94#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CEBot.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CEBot.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.config" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,48 +81,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.config" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web.config">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hostingstart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostingstart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taras.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/dictionaries/taras.xml">
+      <file leaf-file-name="ptvs_virtualenv_proxy.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ptvs_virtualenv_proxy.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -102,8 +104,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="26" />
+            <state relative-caret-position="315">
+              <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding>
                 <element signature="e#70#83#0" expanded="true" />
               </folding>
@@ -146,9 +148,9 @@
       <list>
         <option value="$PROJECT_DIR$/BotHandler.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/routes.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -200,120 +202,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CEBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dictionaries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -737,13 +625,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/contact.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -835,7 +716,7 @@
         <state relative-caret-position="-212">
           <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
           <folding>
-            <element signature="e#54#103#0" expanded="true" />
+            <element signature="e#54#94#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -962,22 +843,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ptvs_virtualenv_proxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1041">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -993,7 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CEBot.iml" />
     <entry file="file://$PROJECT_DIR$/.idea/dictionaries/taras.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1007,16 +872,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="26" />
-          <folding>
-            <element signature="e#70#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,21 +893,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes.py">
+    <entry file="file://$PROJECT_DIR$/CEBot.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <element signature="e#54#103#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ptvs_virtualenv_proxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="e#70#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+          <folding>
+            <element signature="e#54#94#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
