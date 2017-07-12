@@ -40,7 +40,7 @@ if __name__ == '__main__':
     app = bottle.Bottle()
     srv = SSLWSGIRefServer(host="cefitbot.azurewebsites.net", port=80)
     bottle.run(server=srv)
-    while True:
-        global app_info
-        app_info = routes.checkForUpdateLocal()
-        time.sleep(10)
+    # while True:
+    #     global app_info
+    #     app_info = routes.checkForUpdateLocal()
+    #     time.sleep(10)

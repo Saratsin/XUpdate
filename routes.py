@@ -20,7 +20,8 @@ def getApp():
 
 @route('/checkForUpdate')
 def checkForUpdate():
-    return app.app_info
+    return checkForUpdateLocal()
+    # return app.app_info
 
 def getAppInfoJson():
     request = urllib.request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
