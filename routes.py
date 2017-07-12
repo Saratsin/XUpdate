@@ -6,9 +6,8 @@ from bottle import route, view, redirect, request
 from datetime import datetime
 import telegram
 import json
-import urllib
+import urllib.request
 import ssl
-import app
 
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
 APPNAME='cefitbot'
