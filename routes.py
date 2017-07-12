@@ -13,12 +13,12 @@ import time
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
 APPNAME='cefitbot'
 HOCKEYAPPTOKEN = 'eb31bf4e16804f768847185318d45c00'
-app_version = 77
+app_id= 77
 app_info = None
 
 @route('/getApk')
 def getApp():
-    return redirect('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions/{}?format=apk&avtoken=4c7da37fdb7681457730592e61afe7f3c38275a5'.format(app_version))
+    return redirect('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions/{}?format=apk&avtoken=4c7da37fdb7681457730592e61afe7f3c38275a5'.format(app_id))
 
 @route('/checkForUpdate')
 def checkForUpdate():
@@ -36,8 +36,8 @@ def checkForUpdateLocal():
             return None
 
         latestVersionInfo = appResultJson['app_versions'][0]
-        global  app_version
-        app_version = int(latestVersionInfo['version'])
+        global  app_id
+        app_id = int(latestVersionInfo['id'])
         resultJson = json.dumps({
             'NewVersion' : latestVersionInfo['version'],
             'UpdateMandatory' : 'true',
