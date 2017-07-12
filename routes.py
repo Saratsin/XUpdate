@@ -8,12 +8,11 @@ import telegram
 import json
 import urllib
 import ssl
+import app
 
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
 APPNAME='cefitbot'
 HOCKEYAPPTOKEN = 'eb31bf4e16804f768847185318d45c00'
-app_id= 77
-app_info = None
 
 @route('/getApk')
 def getApp():
@@ -21,8 +20,7 @@ def getApp():
 
 @route('/checkForUpdate')
 def checkForUpdate():
-    global app_info
-    return app_info
+    return app.app_info
 
 def getAppInfoJson():
     request = urllib.request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
@@ -36,8 +34,7 @@ def checkForUpdateLocal():
             return "Empty response from hockeyapp"
 
         latestVersionInfo = appResultJson['app_versions'][0]
-        global  app_id
-        app_id = int(latestVersionInfo['id'])
+        route.app_id = int(latestVersionInfo['id'])
         resultJson = json.dumps({
             'NewVersion' : latestVersionInfo['version'],
             'UpdateMandatory' : 'true',

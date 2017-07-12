@@ -9,6 +9,8 @@ import sys
 # routes contains the HTTP handlers for our server and must be imported.
 import routes
 
+app_id= 77
+app_info = None
 
 class SSLWSGIRefServer(bottle.ServerAdapter):
     def run(self, handler):
@@ -39,5 +41,6 @@ if __name__ == '__main__':
     srv = SSLWSGIRefServer(host="cefitbot.azurewebsites.net", port=80)
     bottle.run(server=srv)
     while True:
-        routes.app_info = routes.checkForUpdateLocal()
+        global app_info
+        app_info = routes.checkForUpdateLocal()
         time.sleep(10)
