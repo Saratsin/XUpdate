@@ -42,8 +42,8 @@ def checkForUpdateLocal():
             'ApkSizeInBytes' : str(latestVersionInfo['appsize'])
         })
         return str(resultJson)
-    except:
-        return "Exception"
+    except Exception as inst:
+        return repr(inst)
 
 @route('/setWebhook')
 def setWebhook():
