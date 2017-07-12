@@ -21,6 +21,7 @@ def getApp():
 
 @route('/checkForUpdate')
 def checkForUpdate():
+    global app_info
     return app_info
 
 def getAppInfoJson():
