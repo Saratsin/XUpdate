@@ -18,9 +18,11 @@
       <file leaf-file-name="routes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-550">
-              <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="121">
+              <caret line="85" column="16" lean-forward="true" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+              <folding>
+                <element signature="e#54#94#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -775,7 +777,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-212">
           <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-          <folding />
+          <folding>
+            <element signature="e#54#94#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -972,9 +976,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-550">
-          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="121">
+          <caret line="85" column="16" lean-forward="true" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+          <folding>
+            <element signature="e#54#94#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
