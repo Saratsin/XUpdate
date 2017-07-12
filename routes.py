@@ -2,12 +2,45 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view, run, request
+from bottle import route, view, redirect, request
 from datetime import datetime
 import telegram
+import json
+import urllib
+import ssl
 
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
 APPNAME='cefitbot'
+HOCKEYAPPTOKEN = 'eb31bf4e16804f768847185318d45c00'
+app_version = 77
+
+@route('/getApk')
+def getApp():
+    return redirect('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions/{}?format=apk&avtoken=4c7da37fdb7681457730592e61afe7f3c38275a5'.format(app_version))
+
+@route('/checkForUpdate')
+def checkForUpdate():
+    try:
+        appResultJson = getAppInfoJson()
+        if appResultJson is None:
+            return None
+
+        latestVersionInfo = appResultJson['app_versions'][0]
+        global  app_version
+        app_version = int(latestVersionInfo['version'])
+        resultJson = json.dumps({
+            'NewVersion' : latestVersionInfo['version'],
+            'UpdateMandatory' : 'true',
+            'ApkSizeInBytes' : str(latestVersionInfo['appsize'])
+        })
+        return resultJson
+    except:
+        return None
+
+def getAppInfoJson():
+    request = urllib.request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
+    gcontext = ssl._create_unverified_context()
+    return json.loads(urllib.request.urlopen(request, context=gcontext).read())
 
 
 @route('/setWebhook')
