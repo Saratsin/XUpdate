@@ -3,31 +3,28 @@ Routes and views for the bottle application.
 """
 
 from bottle import route, view, redirect, request
-import urllib.request
 from datetime import datetime
 import telegram
 import json
 import ssl
+import urllib.request
 
 app_id= 77
-
 TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
 APPNAME='cefitbot'
 HOCKEYAPPTOKEN = 'eb31bf4e16804f768847185318d45c00'
+
 
 @route('/getApk')
 def getApp():
     return redirect('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions/{}?format=apk&avtoken=4c7da37fdb7681457730592e61afe7f3c38275a5'.format(app_id))
 
-@route('/checkForUpdate')
-def checkForUpdate():
-    return checkForUpdateLocal()
-    # return app.app_info
 
 def getAppInfoJson():
     request = urllib.request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
     gcontext = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
     return json.loads(urllib.request.urlopen(request, context=gcontext).read())
+
 
 def checkForUpdateLocal():
     try:
@@ -47,6 +44,12 @@ def checkForUpdateLocal():
     except Exception as inst:
         return repr(inst)
 
+
+@route('/checkForUpdate')
+def checkForUpdate():
+    return checkForUpdateLocal()
+
+
 @route('/setWebhook')
 def setWebhook():
     bot = telegram.Bot(TOKEN)
@@ -60,6 +63,7 @@ def botHook():
     update = telegram.update.Update.de_json(request.json, bot)
     bot.sendMessage(chat_id=update.message.chat_it, text=getSum(update.message.text, update.message.from_user.username))
     return 'OK'
+
 
 def getSum(query, userName):
     try:
@@ -80,6 +84,7 @@ def home():
         year=datetime.now().year
     )
 
+
 @route('/contact')
 @view('contact')
 def contact():
@@ -89,6 +94,7 @@ def contact():
         message='Your contact page.',
         year=datetime.now().year
     )
+
 
 @route('/about')
 @view('about')
