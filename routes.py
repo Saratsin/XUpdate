@@ -2,7 +2,7 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view, redirect
+from bottle import route, view, get, redirect
 from datetime import datetime
 import  json, ssl
 import urllib2
@@ -11,6 +11,7 @@ TOKEN = '387238739:AAHHtOlnJ2zL_BQ_KsbnlnX4NWqOXlzyFDA'
 APPNAME='cefitbot'
 HOCKEYAPPTOKEN = 'eb31bf4e16804f768847185318d45c00'
 
+@get('/getApk')
 @route('/getApk')
 def getApp():
     return redirect('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions/{}?format=apk&avtoken=4c7da37fdb7681457730592e61afe7f3c38275a5'.format(app_id))
@@ -39,7 +40,7 @@ def checkForUpdateLocal():
     except Exception as inst:
         return repr(inst)
 
-
+@get('/checkForUpdate')
 @route('/checkForUpdate')
 def checkForUpdate():
     return checkForUpdateLocal()
