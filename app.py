@@ -18,9 +18,9 @@ class SSLWSGIRefServer(bottle.ServerAdapter):
                 def log_request(*args, **kw): pass
             self.options['handler_class'] = QuietHandler
         srv = make_server(self.host, self.port, handler, **self.options)
-        srv.socket = ssl.wrap_socket (srv.socket,
-                                      certfile='server.pem', server_side=True)
+        srv.socket = ssl.wrap_socket (srv.socket, certfile='server.pem', server_side=True)
         srv.serve_forever()
+
 
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:
     # Debug mode will enable more verbose output in the console window.
