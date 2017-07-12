@@ -2,8 +2,7 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view, redirect
-import bottle.request
+from bottle import route, view, redirect, request
 import urllib.request
 from datetime import datetime
 import telegram
@@ -56,7 +55,7 @@ def setWebhook():
 @route('/bothook', method='POST')
 def botHook():
     bot = telegram.Bot(TOKEN)
-    update = telegram.update.Update.de_json(bottle.request.json, bot)
+    update = telegram.update.Update.de_json(request.json, bot)
     bot.sendMessage(chat_id=update.message.chat_it, text=getSum(update.message.text, update.message.from_user.username))
     return 'OK'
 
