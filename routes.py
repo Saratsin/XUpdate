@@ -18,8 +18,7 @@ def getApp():
 
 def getAppInfoJson():
     newRequest = urllib2.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
-    gcontext = ssl._create_default_https_context()
-    return json.loads(urllib2.urlopen(newRequest, context=gcontext).read())
+    return json.loads(urllib2.urlopen(newRequest).read())
 
 
 def checkForUpdateLocal():
