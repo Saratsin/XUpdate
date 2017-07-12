@@ -44,38 +44,38 @@ def about():
         year=datetime.now().year
     )
 
-@route('/getApk')
-def getApp():
-    return redirect('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions/{}?format=apk&avtoken=4c7da37fdb7681457730592e61afe7f3c38275a5'.format(app_id))
-
-
-def getAppInfoJson():
-    newRequest = request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
-    gcontext = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
-    return json.loads(request.urlopen(newRequest, context=gcontext).read())
-
-
-def checkForUpdateLocal():
-    try:
-        appResultJson = getAppInfoJson()
-        if appResultJson is None:
-            return "Empty response from hockeyapp"
-
-        latestVersionInfo = appResultJson['app_versions'][0]
-        global app_id
-        app_id = int(latestVersionInfo['id'])
-        resultJson = json.dumps({
-            'NewVersion' : latestVersionInfo['version'],
-            'UpdateMandatory' : 'true',
-            'ApkSizeInBytes' : str(latestVersionInfo['appsize'])
-        })
-        return str(resultJson)
-    except Exception as inst:
-        return repr(inst)
-
-
-@route('/checkForUpdate')
-def checkForUpdate():
-    return checkForUpdateLocal()
+# @route('/getApk')
+# def getApp():
+#     return redirect('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions/{}?format=apk&avtoken=4c7da37fdb7681457730592e61afe7f3c38275a5'.format(app_id))
+#
+#
+# def getAppInfoJson():
+#     newRequest = request.Request('https://rink.hockeyapp.net/api/2/apps/5678688052d344279b4f7dc00a203d3e/app_versions?pages=1', headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
+#     gcontext = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
+#     return json.loads(request.urlopen(newRequest, context=gcontext).read())
+#
+#
+# def checkForUpdateLocal():
+#     try:
+#         appResultJson = getAppInfoJson()
+#         if appResultJson is None:
+#             return "Empty response from hockeyapp"
+#
+#         latestVersionInfo = appResultJson['app_versions'][0]
+#         global app_id
+#         app_id = int(latestVersionInfo['id'])
+#         resultJson = json.dumps({
+#             'NewVersion' : latestVersionInfo['version'],
+#             'UpdateMandatory' : 'true',
+#             'ApkSizeInBytes' : str(latestVersionInfo['appsize'])
+#         })
+#         return str(resultJson)
+#     except Exception as inst:
+#         return repr(inst)
+#
+#
+# @route('/checkForUpdate')
+# def checkForUpdate():
+#     return checkForUpdateLocal()
 
 
