@@ -33,7 +33,7 @@ def checkForUpdateLocal():
     try:
         appResultJson = getAppInfoJson()
         if appResultJson is None:
-            return None
+            return "Empty response from hockeyapp"
 
         latestVersionInfo = appResultJson['app_versions'][0]
         global  app_id
@@ -45,7 +45,7 @@ def checkForUpdateLocal():
         })
         return str(resultJson)
     except:
-        return None
+        return "Exception"
 
 @route('/setWebhook')
 def setWebhook():
