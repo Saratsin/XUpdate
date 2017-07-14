@@ -35,7 +35,7 @@ def checkForUpdate():
         app_id = int(latestVersionInfo['id'])
         resultJson = json.dumps({
             'NewVersion' : latestVersionInfo['version'],
-            'UpdateMandatory' : 'true',
+            'UpdateMandatory' : 'false',
             'ApkSizeInBytes' : str(latestVersionInfo['appsize'])
         })
         return str(resultJson)
