@@ -30,7 +30,15 @@ def checkForUpdate():
         if appResultJson is None:
             return None
 
-        latestVersionInfo = appResultJson['app_versions'][0]
+        latestVersionInfo = None
+        for version in appResultJson['app_versions']:
+            if version['status'] == 2:
+                latestVersionInfo = version
+                break
+
+        if latestVersionInfo is None:
+            return None
+
         global app_id
         app_id = int(latestVersionInfo['id'])
         resultJson = json.dumps({
