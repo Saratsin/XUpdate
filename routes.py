@@ -55,16 +55,15 @@ def getAppId(companyId):
 @get('/getApk')
 @route('/getApk')
 def getApp():
-    try:
-        parameters = request.query.getlist('company')
-        companyId = 'NCS'
-        if len(parameters) > 0:
-            companyId = parameters[0]
-        appId = getAppId(companyId)
-        return redirect('https://rink.hockeyapp.net/api/2/apps/{0}?format=apk'.format(appId))
-    except Exception as inst:
-        return str(inst)
+    parameters = request.query.getlist('company')
+    companyId = 'NCS'
+    if len(parameters) > 0:
+        companyId = parameters[0]
+    appId = getAppId(companyId)
+    newRequest = urllib2.Request('https://rink.hockeyapp.net/api/2/apps/{0}?format=apk'.format(appId))
+    return urllib2.urlopen(newRequest)
 
+getApp()
 
 def getAppInfoJson():
     parameters = request.query.getlist('company')
