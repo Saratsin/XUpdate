@@ -65,10 +65,8 @@ def getApp():
     except Exception as inst:
         return str(inst)
 
-from bottle import MultiDict
 
 def getAppInfoJson():
-    MultiDict().getlist('').count()
     parameters = request.query.getlist('company')
     companyId = 'NCS'
     if len(parameters) > 0:
