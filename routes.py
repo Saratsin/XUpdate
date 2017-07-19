@@ -65,7 +65,6 @@ def getApp():
     except Exception as inst:
         return str(inst)
 
-getApp()
 
 def getAppInfoJson():
     parameters = request.query.getlist('company')
