@@ -44,9 +44,9 @@ def getApiToken(companyId):
 
 def getAppId(companyId):
     return {
-        'MAR': MARAPITOKEN,
-        'NCS': NCSAPITOKEN,
-        'PRO': PROAPITOKEN
+        'MAR': MARAPPID,
+        'NCS': NCSAPPID,
+        'PRO': PROAPPID
     }[companyId]
 
 #END
@@ -65,6 +65,7 @@ def getApp():
     except Exception as inst:
         return str(inst)
 
+getApp()
 
 def getAppInfoJson():
     parameters = request.query.getlist('company')
