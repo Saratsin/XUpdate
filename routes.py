@@ -2,28 +2,69 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view, get, redirect
+from bottle import route, view, get, redirect, request
 from datetime import datetime
-import  json, ssl
+import  json
 import urllib2
 
-HOCKEYAPPTOKEN = 'fcc1d505c1884c9a81953351449b4ebe'
-HOCKEYAPPID = '231414e493a34ddb96a96bde60d39f2b'
+#QA LOGIC
 
-# HOCKEYAPPTOKEN = 'eb31bf4e16804f768847185318d45c00'
-# HOCKEYAPPID = '5678688052d344279b4f7dc00a203d3e'
+# QAAPITOKEN = 'fcc1d505c1884c9a81953351449b4ebe'
+#
+# QAAPPID = '231414e493a34ddb96a96bde60d39f2b'
+#
+#
+# def getApiToken(companyId):
+#     return QAAPITOKEN
+#
+# def getAppId(companyId):
+#     return QAAPPID
 
-app_id = 1
+#END
+
+
+#Release LOGIC
+
+MARAPITOKEN = 'ea53c4d267fe45a2a5525cdc0781f550'
+NCSAPITOKEN = 'eb31bf4e16804f768847185318d45c00'
+PROAPITOKEN = 'ec51d0fba71a4cce83ae6744c5211ba7'
+
+MARAPPID = '3e8c3c11679d41158dc15d5088929eae'
+NCSAPPID = '5678688052d344279b4f7dc00a203d3e'
+PROAPPID = '1c7acaf01ddf4db3aa8fffa84464927d'
+
+
+def getApiToken(companyId):
+    return {
+        'MAR': MARAPITOKEN,
+        'NCS': NCSAPITOKEN,
+        'PRO': PROAPITOKEN
+    }[companyId]
+
+
+def getAppId(companyId):
+    return {
+        'MAR': MARAPITOKEN,
+        'NCS': NCSAPITOKEN,
+        'PRO': PROAPITOKEN
+    }[companyId]
+
+#END
 
 
 @get('/getApk')
 @route('/getApk')
 def getApp():
-    return redirect('https://rink.hockeyapp.net/api/2/apps/{0}/app_versions/{1}?format=apk'.format(HOCKEYAPPID, app_id))
+    try:
+        appId = getAppId(request.query.company)
+        return redirect('https://rink.hockeyapp.net/api/2/apps/{0}?format=apk'.format(appId))
+    except Exception as inst:
+        return str(inst)
 
 
 def getAppInfoJson():
-    newRequest = urllib2.Request('https://rink.hockeyapp.net/api/2/apps/{0}/app_versions?pages=1'.format(HOCKEYAPPID), headers={ 'X-HockeyAppToken': HOCKEYAPPTOKEN })
+    companyId = request.query.company
+    newRequest = urllib2.Request('https://rink.hockeyapp.net/api/2/apps/{0}/app_versions?pages=1'.format(getAppId(companyId)), headers={ 'X-HockeyAppToken': getApiToken(companyId) })
     return json.loads(urllib2.urlopen(newRequest).read())
 
 
@@ -44,8 +85,6 @@ def checkForUpdate():
         if latestVersionInfo is None:
             return None
 
-        global app_id
-        app_id = int(latestVersionInfo['id'])
         resultJson = json.dumps({
             'NewVersion' : latestVersionInfo['version'],
             'UpdateMandatory' : 'false',
