@@ -7,6 +7,13 @@ from datetime import datetime
 import  json
 import urllib2
 
+<<<<<<< HEAD
+# HOCKEYAPPTOKEN = 'fcc1d505c1884c9a81953351449b4ebe'
+# HOCKEYAPPID = '231414e493a34ddb96a96bde60d39f2b'
+
+HOCKEYAPPTOKEN = 'eb31bf4e16804f768847185318d45c00'
+HOCKEYAPPID = '5678688052d344279b4f7dc00a203d3e'
+=======
 #QA LOGIC
 
 # QAAPITOKEN = 'fcc1d505c1884c9a81953351449b4ebe'
@@ -19,6 +26,7 @@ import urllib2
 #
 # def getAppId(companyId):
 #     return QAAPPID
+>>>>>>> master
 
 #END
 
