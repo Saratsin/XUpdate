@@ -9,45 +9,45 @@ import urllib2
 
 #QA LOGIC
 
-# QAAPITOKEN = 'fcc1d505c1884c9a81953351449b4ebe'
-#
-# QAAPPID = '231414e493a34ddb96a96bde60d39f2b'
-#
-#
-# def getApiToken(companyId):
-#     return QAAPITOKEN
-#
-# def getAppId(companyId):
-#     return QAAPPID
+QAAPITOKEN = 'fcc1d505c1884c9a81953351449b4ebe'
+
+QAAPPID = '231414e493a34ddb96a96bde60d39f2b'
+
+
+def getApiToken(companyId):
+    return QAAPITOKEN
+
+def getAppId(companyId):
+    return QAAPPID
 
 #END
 
 
 #Release LOGIC
 
-MARAPITOKEN = 'ea53c4d267fe45a2a5525cdc0781f550'
-NCSAPITOKEN = 'eb31bf4e16804f768847185318d45c00'
-PROAPITOKEN = 'ec51d0fba71a4cce83ae6744c5211ba7'
-
-MARAPPID = '3e8c3c11679d41158dc15d5088929eae'
-NCSAPPID = '5678688052d344279b4f7dc00a203d3e'
-PROAPPID = '1c7acaf01ddf4db3aa8fffa84464927d'
-
-
-def getApiToken(companyId):
-    return {
-        'MAR': MARAPITOKEN,
-        'NCS': NCSAPITOKEN,
-        'PRO': PROAPITOKEN
-    }[companyId]
-
-
-def getAppId(companyId):
-    return {
-        'MAR': MARAPPID,
-        'NCS': NCSAPPID,
-        'PRO': PROAPPID
-    }[companyId]
+# MARAPITOKEN = 'ea53c4d267fe45a2a5525cdc0781f550'
+# NCSAPITOKEN = 'eb31bf4e16804f768847185318d45c00'
+# PROAPITOKEN = 'ec51d0fba71a4cce83ae6744c5211ba7'
+#
+# MARAPPID = '3e8c3c11679d41158dc15d5088929eae'
+# NCSAPPID = '5678688052d344279b4f7dc00a203d3e'
+# PROAPPID = '1c7acaf01ddf4db3aa8fffa84464927d'
+#
+#
+# def getApiToken(companyId):
+#     return {
+#         'MAR': MARAPITOKEN,
+#         'NCS': NCSAPITOKEN,
+#         'PRO': PROAPITOKEN
+#     }[companyId]
+#
+#
+# def getAppId(companyId):
+#     return {
+#         'MAR': MARAPPID,
+#         'NCS': NCSAPPID,
+#         'PRO': PROAPPID
+#     }[companyId]
 
 #END
 
