@@ -28,25 +28,28 @@ import urllib2
 MARAPITOKEN = 'ea53c4d267fe45a2a5525cdc0781f550'
 NCSAPITOKEN = 'eb31bf4e16804f768847185318d45c00'
 PROAPITOKEN = 'ec51d0fba71a4cce83ae6744c5211ba7'
+FRORUSAPITOKEN = 'f565ccb84bbb43c4aa23b98c9ddc438f'
 
 MARAPPID = '3e8c3c11679d41158dc15d5088929eae'
 NCSAPPID = '5678688052d344279b4f7dc00a203d3e'
 PROAPPID = '1c7acaf01ddf4db3aa8fffa84464927d'
-
+FRORUSAPPID = '3f80246ce01f4489971a6c9925a27a5f'
 
 def getApiToken(companyId):
     return {
-        'MAR': MARAPITOKEN,
-        'NCS': NCSAPITOKEN,
-        'PRO': PROAPITOKEN
+        'FRORUS': FRORUSAPITOKEN
+        #'MAR': MARAPITOKEN,
+        #'NCS': NCSAPITOKEN,
+        #'PRO': PROAPITOKEN
     }[companyId]
 
 
 def getAppId(companyId):
     return {
-        'MAR': MARAPPID,
-        'NCS': NCSAPPID,
-        'PRO': PROAPPID
+        'FRORUS': FRORUSAPPID
+        #'MAR': MARAPPID,
+        #'NCS': NCSAPPID,
+        #'PRO': PROAPPID
     }[companyId]
 
 #END
