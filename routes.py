@@ -38,7 +38,7 @@ FRORUSAPPID = '3f80246ce01f4489971a6c9925a27a5f'
 def getApiToken(companyId):
     return {
         'FRORUS': FRORUSAPITOKEN
-        #'MAR': MARAPITOKEN,
+        'MAR': MARAPITOKEN,
         #'NCS': NCSAPITOKEN,
         #'PRO': PROAPITOKEN
     }[companyId]
@@ -47,7 +47,7 @@ def getApiToken(companyId):
 def getAppId(companyId):
     return {
         'FRORUS': FRORUSAPPID
-        #'MAR': MARAPPID,
+        'MAR': MARAPPID,
         #'NCS': NCSAPPID,
         #'PRO': PROAPPID
     }[companyId]
